@@ -52,18 +52,6 @@ def calcul(lp,line,col,linp,colp):
 
     return new_matrice            
     
-
-
-#%% Demander les infos à l'utilisateur
-
-# print("Bienvenue dans ce programme de calcul de simplex !")
-    
-# type_prob = input("Est-ce un problème de maximisation ou de minimisation ? max ou min")
-    
-# nb_var = input("Saisissez le nombre de variable du problème :")
-
-
-
 #%% Algo des simplex
 
 def simplex(simplex):
@@ -85,11 +73,6 @@ def simplex(simplex):
 
     return(simplex)
 
-def BigM():
-    bigm = np.array((10,10))
-    return bigm
-
-
 matrice = np.array([[-3,-4,0,0,1,0],
                     [1,1,1,0,0,4],
                     [2,1,0,1,0,5]])
@@ -97,25 +80,25 @@ matrice = np.array([[-3,-4,0,0,1,0],
 matrice_simplex = simplex(matrice)
 print(matrice_simplex)
 
-c = 'a'
+# c = 'a'
 
-print("Veuillez saisir votre problème d'optimisation dans le fichier problem_simplex.txt")
-print("Appuyez sur la touche o quand vous êtes prêt :")
+# print("Veuillez saisir votre problème d'optimisation dans le fichier problem_simplex.txt")
+# print("Appuyez sur la touche o quand vous êtes prêt :")
 
-while c!='o':
-    c=input()
+# while c!='o':
+#     c=input()
     
-f = open("problem_simplex.txt","r")
-ligne = f.readline()
+# f = open("problem_simplex.txt","r")
+# ligne = f.readline()
 
-while ligne[0] == '*':
+# while ligne[0] == '*':
     
-    ligne = f.readline()
+#     ligne = f.readline()
     
-if ligne == "Max":
-    ligne = f.readline()
-    while ligne[0] != '*':
-        print(ligne)
+# if ligne == "Max":
+#     ligne = f.readline()
+#     while ligne[0] != '*':
+#         print(ligne)
 
 
 
